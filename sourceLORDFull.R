@@ -151,7 +151,7 @@ SocialCnt_TotalporODT<-TotalporODT(SocialCnt_ts)
 
 write.csv(BI_TotalporODT, "BI/LORD/BI_TotalporODT.csv", na="")   #Exportar datos 
 write.csv(PM_TotalporODT, "PM/LORD/PM_TotalporODT.csv", na="")   
-write.csv(Creativo_TotalporODT, "BI/LORD/Creativo/Creativo_TotalporODT.csv", na="")   
+write.csv(Creativo_TotalporODT, "Creativo/LORD/Creativo_TotalporODT.csv", na="")   
 write.csv(Cuentas_TotalporODT, "Cuentas/LORD/Cuentas_TotalporODT.csv", na="")   
 write.csv(Desarrollo_TotalporODT, "Desarrollo/LORD/Desarrollo_TotalporODT.csv", na="")   
 write.csv(UX_TotalporODT, "UX/LORD/UX_TotalporODT.csv", na="")   
