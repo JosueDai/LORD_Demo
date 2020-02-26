@@ -17,30 +17,32 @@ library(tidyr)      ## v 1.0.2
 ### LOAD ts files from area
 
 BI_ts <-read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")     #Carga datos de la carpeta de TimeSheet
-Creativo_ts <- read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-Cuentas_ts <-read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-PM_ts <- read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-UX_ts <- read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-Desarrollo_ts <- read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-SocialCnt_ts <- read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+Creativo_ts <- read.csv(file="Creativo/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+Cuentas_ts <-read.csv(file="Cuentas/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+PM_ts <- read.csv(file="PM/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+UX_ts <- read.csv(file="UX/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+Desarrollo_ts <- read.csv(file="Desarrollo/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+SocialCnt_ts <- read.csv(file="SocialCnt/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
 
 BI_rc <-read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-Creativo_rc <-read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-Cuentas_rc <-read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-PM_rc <- read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-UX_rc <- read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-Desarrollo_rc <- read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-SocialCnt_rc <- read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+Creativo_rc <-read.csv(file="Creativo/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+Cuentas_rc <-read.csv(file="Cuentas/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+PM_rc <- read.csv(file="PM/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+UX_rc <- read.csv(file="UX/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+Desarrollo_rc <- read.csv(file="Desarrollo/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+SocialCnt_rc <- read.csv(file="SocialCnt/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
 
 BI_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-Creativo_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-Cuentas_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-PM_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-UX_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-Desarrollo_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-SocialCnt_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+Creativo_rate <- read.csv(file="Creativo/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+Cuentas_rate <- read.csv(file="Cuentas/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+PM_rate <- read.csv(file="PM/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+UX_rate <- read.csv(file="UX/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+Desarrollo_rate <- read.csv(file="Desarrollo/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+SocialCnt_rate <- read.csv(file="SocialCnt/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
 
 #Funciones utilizadas para limpieza y modificacion de variables.
+
+###Clean BI----
 cleanData<- function(data){
    #modificacion y eliminacion de tabla
    colnames(data) <- as.character(unlist(data[2,]))
@@ -105,6 +107,7 @@ BI_ts<-cleanData(BI_ts)
 BI_rc<-cleanRC(BI_rc)
 BI_rate<-cleanRate(BI_rate)
 
+### Clean Creativo----
 
 
 
