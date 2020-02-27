@@ -48,7 +48,7 @@ PM_rate <- read.csv(file="PM/Source/rate.csv" ,head=T,sep=",", fileEncoding = "l
 
 #Funciones utilizadas para limpieza y modificacion de variables.
 
-###Clean BI----
+###Clean datos----
 cleanData<- function(data){
    #modificacion y eliminacion de tabla
    colnames(data) <- as.character(unlist(data[2,]))
@@ -113,9 +113,31 @@ BI_ts<-cleanData(BI_ts)
 BI_rc<-cleanRC(BI_rc)
 BI_rate<-cleanRate(BI_rate)
 
+Creativo_ts<-cleanData(Creativo_ts)
+Creativo_rc<-cleanRC(Creativo_rc)
+Creativo_rate<-cleanRate(Creativo_rate)
 
+Cuentas_ts<-cleanData(Cuentas_ts)
+Cuentas_rc<-cleanRC(Cuentas_rc)
+Cuentas_rate<-cleanRate(Cuentas_rate)
 
-# Total de horas por persona--------------- 
+SocialCnt_ts<-cleanData(SocialCnt_ts)
+SocialCnt_rc<-cleanRC(SocialCnt_rc)
+SocialCnt_rate<-cleanRate(SocialCnt_rate)
+
+Desarrollo_ts<-cleanData(Desarrollo_ts)
+Desarrollo_rc<-cleanRC(Desarrollo_rc)
+Desarrollo_rate<-cleanRate(Desarrollo_rate)
+
+UX_ts<-cleanData(UX_ts)
+UX_rc<-cleanRC(UX_rc)
+UX_rate<-cleanRate(UX_rate)
+
+PM_ts<-cleanData(PM_ts)
+PM_rc<-cleanRate(PM_rc)
+PM_rate<-cleanRate(PM_rate)
+
+#Total de horas por persona--------------- 
 TotalporODT <- function (data){
   TotalporODT <-aggregate( Tiempo ~  ODT + Nombre, FUN=sum, data=data)
   return (TotalporODT)
@@ -123,12 +145,12 @@ TotalporODT <- function (data){
 
 
 BI_TotalporODT<-TotalporODT(BI_ts)
-Creativo_TotalporODT<- TotalporODTCre(Creativo_ts)
-Cuentas_TotalporODT<-TotalporODTCu(Cuentas_ts)
-UX_TotalporODT<-TotalporODTSo(UX_ts)
-PM_TotalporODT<-TotalporODTDe(PM_ts)
-Desarrollo_TotalporODT<-TotalporODTUx(Desarrollo_ts)
-SocialCnt_TotalporODT<-TotalporODTPm(SocialCnt_ts)
+Creativo_TotalporODT<- TotalporODT(Creativo_ts)
+Cuentas_TotalporODT<-TotalporODT(Cuentas_ts)
+UX_TotalporODT<-TotalporODT(UX_ts)
+PM_TotalporODT<-TotalporODT(PM_ts)
+Desarrollo_TotalporODT<-TotalporODT(Desarrollo_ts)
+SocialCnt_TotalporODT<-TotalporODT(SocialCnt_ts)
 
 write.csv(BI_TotalporODT, "BI/LORD/BI_TotalporODT.csv", na="")   #Exportar datos 
 write.csv(Creativo_TotalporODT, "Creativo/LORD/Creativo_TotalporODT.csv", na="")
@@ -211,7 +233,7 @@ write.csv(SocialCnt_ArealporMarca, "SocialCnt/LORD/SocialCnt_ArealporMarca.csv",
 
 
 
-# Total de horas por persona por mes--------------- 
+#Total de horas por persona por mes--------------- 
 
 
 
@@ -312,7 +334,7 @@ write.csv(UX_ArealporMarcaMes, "UX/LORD/UX_ArealporMarcaMes.csv", na="")
 write.csv(SocialCnt_ArealporMarcaMes, "SocialCnt/LORD/SocialCnt_ArealporMarcaMes.csv", na="")   
 
 
-# Total de horas por persona por semana--------------- 
+#Total de horas por persona por semana--------------- 
 
 
 TotalporODTS <- function (data){
@@ -425,7 +447,7 @@ write.csv(UX_AreaporMarcaS, "UX/LORD/UX_AreaporMarcaS.csv", na="")
 write.csv(SocialCnt_AreaporMarcaS, "SocialCnt/LORD/SocialCnt_AreaporMarcaS.csv", na="")   
 
 
-# Total de horas por persona por semana & mes--------------- 
+#Total de horas por persona por semana & mes--------------- 
 
 
 TotalTiempoPersonaS <- function (data){
@@ -477,7 +499,7 @@ write.csv(SocialCnt_TotalTiempoPersonaM, "SocialCnt/LORD/SocialCnt_TotalTiempoPe
 
 
 
-# TOTAL $ BI --------------- 
+#TOTAL $ BI --------------- 
 TotalporMarcaMesYSEM <- function (data){
   TotalporMarcaMesYSEM<-aggregate( Tiempo ~  Marca + Nombre+ ID + Mes + Semana, FUN=sum, data=data)
   return (TotalporMarcaMesYSEM)
@@ -562,7 +584,7 @@ write.csv(Desarrollo_totalPNL, "Desarrollo/LORD/Desarrollo_totalPNL.csv", na="")
 write.csv(UX_totalPNL, "UX/LORD/UX_totalPNL.csv", na="")   
 write.csv(SocialCnt_totalPNL, "SocialCnt/LORD/SocialCnt_totalPNL.csv", na="")   
 
-# TOTAL $ RC --------------- 
+#TOTAL $ RC --------------- 
 
 
 totalRCMoney<- function(lordrc, rate){
