@@ -4,7 +4,7 @@
 setwd('/Users/lunave/documents/LORD_Demo/')
 
 
-library(reshape2) v ## v 1.4.3
+library(reshape2)   ## v 1.4.3
 library(stringr)    ## v 1.4.0
 library(data.table) ## v 1.12.8
 library(plyr)       ## v 1.8.5
@@ -19,26 +19,32 @@ library(tidyr)      ## v 1.0.2
 BI_ts <-read.csv(file="BI/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")     #Carga datos de la carpeta de TimeSheet
 Creativo_ts <- read.csv(file="Creativo/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
 Cuentas_ts <-read.csv(file="Cuentas/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-PM_ts <- read.csv(file="PM/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-UX_ts <- read.csv(file="UX/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
-Desarrollo_ts <- read.csv(file="Desarrollo/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
 SocialCnt_ts <- read.csv(file="SocialCnt/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+Desarrollo_ts <- read.csv(file="Desarrollo/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+UX_ts <- read.csv(file="UX/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+PM_ts <- read.csv(file="PM/Source/ts/lord.csv" ,head=F,sep=",", fileEncoding = "latin1")
+
+
+
 
 BI_rc <-read.csv(file="BI/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
 Creativo_rc <-read.csv(file="Creativo/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
 Cuentas_rc <-read.csv(file="Cuentas/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-PM_rc <- read.csv(file="PM/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-UX_rc <- read.csv(file="UX/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
-Desarrollo_rc <- read.csv(file="Desarrollo/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
 SocialCnt_rc <- read.csv(file="SocialCnt/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+Desarrollo_rc <- read.csv(file="Desarrollo/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+UX_rc <- read.csv(file="UX/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+PM_rc <- read.csv(file="PM/Source/rc.csv" ,head=T,sep="," , fileEncoding = "latin1")
+
+
 
 BI_rate <- read.csv(file="BI/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
 Creativo_rate <- read.csv(file="Creativo/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
 Cuentas_rate <- read.csv(file="Cuentas/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-PM_rate <- read.csv(file="PM/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-UX_rate <- read.csv(file="UX/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
-Desarrollo_rate <- read.csv(file="Desarrollo/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
 SocialCnt_rate <- read.csv(file="SocialCnt/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+Desarrollo_rate <- read.csv(file="Desarrollo/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+UX_rate <- read.csv(file="UX/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+PM_rate <- read.csv(file="PM/Source/rate.csv" ,head=T,sep=",", fileEncoding = "latin1")
+
 
 #Funciones utilizadas para limpieza y modificacion de variables.
 
@@ -107,58 +113,31 @@ BI_ts<-cleanData(BI_ts)
 BI_rc<-cleanRC(BI_rc)
 BI_rate<-cleanRate(BI_rate)
 
-### Clean Creativo----
-
-
-
-Creativo_ts<-cleanData(Creativo_ts)
-Creativo_rc<-cleanRC(Creativo_rc)
-Creativo_rate<-cleanRate(Creativo_rate)
-
-Cuentas_ts<-cleanData(Cuentas_ts)
-Cuentas_rc<-cleanRC(Cuentas_rc)
-Cuentas_rate<-cleanRate(Cuentas_rate)
-
-SocialCnt_ts<-cleanData(SocialCnt_ts)
-SocialCnt_rc<-cleanRC(SocialCnt_rc)
-SocialCnt_rate<-cleanRate(SocialCnt_rate)
-
-Desarrollo_ts<-cleanData(Desarrollo_ts)
-Desarrollo_rc<-cleanRC(Desarrollo_rc)
-Desarrollo_rate<-cleanRate(Desarrollo_rate)
-
-UX_ts<-cleanData(UX_ts)
-UX_rc<-cleanRC(UX_rc)
-UX_rate<-cleanRate(UX_rate)
-
-PM_ts<-cleanData(PM_ts)
-PM_rc<-cleanRC(PM_rc)
-PM_rate<-cleanRate(PM_rate)
-
-
 
 
 # Total de horas por persona--------------- 
 TotalporODT <- function (data){
-TotalporODT <-aggregate( Tiempo ~  ODT + Nombre, FUN=sum, data=data)
-return (TotalporODT)
+  TotalporODT <-aggregate( Tiempo ~  ODT + Nombre, FUN=sum, data=data)
+  return (TotalporODT)
 }
 
+
 BI_TotalporODT<-TotalporODT(BI_ts)
-Creativo_TotalporODT<-TotalporODT(Creativo_ts)
-Cuentas_TotalporODT<-TotalporODT(Cuentas_ts)
-UX_TotalporODT<-TotalporODT(UX_ts)
-PM_TotalporODT<-TotalporODT(PM_ts)
-Desarrollo_TotalporODT<-TotalporODT(Desarrollo_ts)
-SocialCnt_TotalporODT<-TotalporODT(SocialCnt_ts)
+Creativo_TotalporODT<- TotalporODTCre(Creativo_ts)
+Cuentas_TotalporODT<-TotalporODTCu(Cuentas_ts)
+UX_TotalporODT<-TotalporODTSo(UX_ts)
+PM_TotalporODT<-TotalporODTDe(PM_ts)
+Desarrollo_TotalporODT<-TotalporODTUx(Desarrollo_ts)
+SocialCnt_TotalporODT<-TotalporODTPm(SocialCnt_ts)
 
 write.csv(BI_TotalporODT, "BI/LORD/BI_TotalporODT.csv", na="")   #Exportar datos 
-write.csv(PM_TotalporODT, "PM/LORD/PM_TotalporODT.csv", na="")   
-write.csv(Creativo_TotalporODT, "Creativo/LORD/Creativo_TotalporODT.csv", na="")   
+write.csv(Creativo_TotalporODT, "Creativo/LORD/Creativo_TotalporODT.csv", na="")
 write.csv(Cuentas_TotalporODT, "Cuentas/LORD/Cuentas_TotalporODT.csv", na="")   
+write.csv(SocialCnt_TotalporODT, "SocialCnt/LORD/SocialCnt_TotalporODT.csv", na="")
 write.csv(Desarrollo_TotalporODT, "Desarrollo/LORD/Desarrollo_TotalporODT.csv", na="")   
 write.csv(UX_TotalporODT, "UX/LORD/UX_TotalporODT.csv", na="")   
-write.csv(SocialCnt_TotalporODT, "SocialCnt/LORD/SocialCnt_TotalporODT.csv", na="")   
+write.csv(PM_TotalporODT, "PM/LORD/PM_TotalporODT.csv", na="")   
+
 
 #Total de horas por marca----
 TotalporMarca <- function (data){
@@ -238,9 +217,10 @@ write.csv(SocialCnt_ArealporMarca, "SocialCnt/LORD/SocialCnt_ArealporMarca.csv",
 
   
   TotalporODTmes <- function (data){
-  TotalporODTmes <-aggregate( Tiempo ~  ODT + Nombre + Mes, FUN=sum, data=data)
+  TotalporODTmes <-aggregate( Tiempo ~  ODT + Nombre + Mes, FUN=sum, data=data)  ##Agrega variables a tabla selecionada
   return (TotalporODTmes)
 }
+
 
 
 

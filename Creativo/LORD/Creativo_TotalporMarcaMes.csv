@@ -1,0 +1,80 @@
+"","Marca","Nombre","ID","Mes","Tiempo","Horas"
+"1","Blason","Andy Múzquiz ","2982431",6,390,6.5
+"2","Lunave","Andy Múzquiz ","2982431",6,930,15.5
+"3","MSD","Andy Múzquiz ","2982431",6,1020,17
+"4","Toyota","Andy Múzquiz ","2982431",6,3630,60.5
+"5","Apple","Paola Terrazas ","3536705",6,2205,36.75
+"6","Lunave","Paola Terrazas ","3536705",6,2385,39.75
+"7","MSD","Paola Terrazas ","3536705",6,75,1.25
+"8","Pitch Superama","Paola Terrazas ","3536705",6,165,2.75
+"9","Richs","Paola Terrazas ","3536705",6,870,14.5
+"10","Singer","Paola Terrazas ","3536705",6,690,11.5
+"11","Walmart","Paola Terrazas ","3536705",6,435,7.25
+"12","Blason","Diana Laura Duran Castillo ","4858805",6,180,3
+"13","Lunave","Diana Laura Duran Castillo ","4858805",6,60,1
+"14","MSD","Diana Laura Duran Castillo ","4858805",6,1110,18.5
+"15","Richs","Diana Laura Duran Castillo ","4858805",6,1695,28.25
+"16","Singer","Diana Laura Duran Castillo ","4858805",6,660,11
+"17","Toyota","Diana Laura Duran Castillo ","4858805",6,3105,51.75
+"18","Apple","Claudia V. ","69709",6,45,0.75
+"19","Lunave","Claudia V. ","69709",6,4680,78
+"20","Pitch Superama","Claudia V. ","69709",6,195,3.25
+"21","Toyota","Claudia V. ","69709",6,435,7.25
+"22","Walmart","Claudia V. ","69709",6,555,9.25
+"23","ACH Foods","JuanPa Plata ","69727",6,60,1
+"24","Blason","JuanPa Plata ","69727",6,90,1.5
+"25","Generación de leads Toyota Saltillo","JuanPa Plata ","69727",6,630,10.5
+"26","INVEX","JuanPa Plata ","69727",6,60,1
+"27","Lunave","JuanPa Plata ","69727",6,1800,30
+"28","MSD","JuanPa Plata ","69727",6,570,9.5
+"29","Pitch Superama","JuanPa Plata ","69727",6,300,5
+"30","Pitch Walmart Ecommerce","JuanPa Plata ","69727",6,240,4
+"31","Richs","JuanPa Plata ","69727",6,30,0.5
+"32","Singer","JuanPa Plata ","69727",6,60,1
+"33","Toyota","JuanPa Plata ","69727",6,2190,36.5
+"34","Walmart","JuanPa Plata ","69727",6,420,7
+"35","Zuma","JuanPa Plata ","69727",6,60,1
+"36","Blason","Andy Múzquiz ","2982431",7,810,13.5
+"37","Lunave","Andy Múzquiz ","2982431",7,1470,24.5
+"38","MSD","Andy Múzquiz ","2982431",7,960,16
+"39","Toyota","Andy Múzquiz ","2982431",7,4980,83
+"40","Apple","Paola Terrazas ","3536705",7,2370,39.5
+"41","Lunave","Paola Terrazas ","3536705",7,2550,42.5
+"42","Richs","Paola Terrazas ","3536705",7,840,14
+"43","Singer","Paola Terrazas ","3536705",7,690,11.5
+"44","Walmart","Paola Terrazas ","3536705",7,3135,52.25
+"45","Blason","Diana Laura Duran Castillo ","4858805",7,420,7
+"46","MSD","Diana Laura Duran Castillo ","4858805",7,120,2
+"47","Richs","Diana Laura Duran Castillo ","4858805",7,1080,18
+"48","Singer","Diana Laura Duran Castillo ","4858805",7,1275,21.25
+"49","Toyota","Diana Laura Duran Castillo ","4858805",7,2115,35.25
+"50","Apple","Claudia V. ","69709",7,60,1
+"51","INVEX","Claudia V. ","69709",7,630,10.5
+"52","Lunave","Claudia V. ","69709",7,7260,121
+"53","MSD","Claudia V. ","69709",7,225,3.75
+"54","Toyota","Claudia V. ","69709",7,825,13.75
+"55","Walmart","Claudia V. ","69709",7,885,14.75
+"56","Blason","JuanPa Plata ","69727",7,540,9
+"57","Generación de leads Toyota Saltillo","JuanPa Plata ","69727",7,450,7.5
+"58","Herdez","JuanPa Plata ","69727",7,240,4
+"59","INVEX","JuanPa Plata ","69727",7,120,2
+"60","Lunave","JuanPa Plata ","69727",7,660,11
+"61","MSD","JuanPa Plata ","69727",7,810,13.5
+"62","PITCH GREAT VALUE","JuanPa Plata ","69727",7,210,3.5
+"63","Richs","JuanPa Plata ","69727",7,300,5
+"64","Singer","JuanPa Plata ","69727",7,60,1
+"65","Toyota","JuanPa Plata ","69727",7,1320,22
+"66","Walmart","JuanPa Plata ","69727",7,1530,25.5
+"67","Blason","Andy Múzquiz ","2982431",8,60,1
+"68","Lunave","Andy Múzquiz ","2982431",8,60,1
+"69","Toyota","Andy Múzquiz ","2982431",8,300,5
+"70","Lunave","Diana Laura Duran Castillo ","4858805",8,210,3.5
+"71","Singer","Diana Laura Duran Castillo ","4858805",8,45,0.75
+"72","Toyota","Diana Laura Duran Castillo ","4858805",8,75,1.25
+"73","Lunave","Claudia V. ","69709",8,585,9.75
+"74","MSD","Claudia V. ","69709",8,15,0.25
+"75","Toyota","Claudia V. ","69709",8,30,0.5
+"76","Walmart","Claudia V. ","69709",8,15,0.25
+"77","Blason","JuanPa Plata ","69727",8,60,1
+"78","Herdez","JuanPa Plata ","69727",8,90,1.5
+"79","MSD","JuanPa Plata ","69727",8,60,1

@@ -1,0 +1,80 @@
+"","ID","Marca","Nombre","Mes","Tiempo","Horas","Puesto","Rate","Money"
+"1","2982431","Blason","Andy Múzquiz ",6,390,6.5,"Analytics Sr",200,1300
+"2","2982431","Lunave","Andy Múzquiz ",6,930,15.5,"Analytics Sr",200,3100
+"3","2982431","MSD","Andy Múzquiz ",6,1020,17,"Analytics Sr",200,3400
+"4","2982431","Toyota","Andy Múzquiz ",6,3630,60.5,"Analytics Sr",200,12100
+"5","2982431","Toyota","Andy Múzquiz ",7,4980,83,"Analytics Sr",200,16600
+"6","2982431","Blason","Andy Múzquiz ",7,810,13.5,"Analytics Sr",200,2700
+"7","2982431","Lunave","Andy Múzquiz ",7,1470,24.5,"Analytics Sr",200,4900
+"8","2982431","MSD","Andy Múzquiz ",7,960,16,"Analytics Sr",200,3200
+"9","2982431","Toyota","Andy Múzquiz ",8,300,5,"Analytics Sr",200,1000
+"10","2982431","Blason","Andy Múzquiz ",8,60,1,"Analytics Sr",200,200
+"11","2982431","Lunave","Andy Múzquiz ",8,60,1,"Analytics Sr",200,200
+"12","3536705","Lunave","Paola Terrazas ",6,2385,39.75,"Analytics Jr",200,7950
+"13","3536705","Apple","Paola Terrazas ",6,2205,36.75,"Analytics Jr",200,7350
+"14","3536705","Apple","Paola Terrazas ",7,2370,39.5,"Analytics Jr",200,7900
+"15","3536705","MSD","Paola Terrazas ",6,75,1.25,"Analytics Jr",200,250
+"16","3536705","Pitch Superama","Paola Terrazas ",6,165,2.75,"Analytics Jr",200,550
+"17","3536705","Richs","Paola Terrazas ",6,870,14.5,"Analytics Jr",200,2900
+"18","3536705","Walmart","Paola Terrazas ",7,3135,52.25,"Analytics Jr",200,10450
+"19","3536705","Singer","Paola Terrazas ",6,690,11.5,"Analytics Jr",200,2300
+"20","3536705","Walmart","Paola Terrazas ",6,435,7.25,"Analytics Jr",200,1450
+"21","3536705","Richs","Paola Terrazas ",7,840,14,"Analytics Jr",200,2800
+"22","3536705","Singer","Paola Terrazas ",7,690,11.5,"Analytics Jr",200,2300
+"23","3536705","Lunave","Paola Terrazas ",7,2550,42.5,"Analytics Jr",200,8500
+"24","4858805","Blason","Diana Laura Duran Castillo ",7,420,7,"Media Buyer",200,1400
+"25","4858805","Richs","Diana Laura Duran Castillo ",7,1080,18,"Media Buyer",200,3600
+"26","4858805","Singer","Diana Laura Duran Castillo ",7,1275,21.25,"Media Buyer",200,4250
+"27","4858805","MSD","Diana Laura Duran Castillo ",6,1110,18.5,"Media Buyer",200,3700
+"28","4858805","MSD","Diana Laura Duran Castillo ",7,120,2,"Media Buyer",200,400
+"29","4858805","Blason","Diana Laura Duran Castillo ",6,180,3,"Media Buyer",200,600
+"30","4858805","Lunave","Diana Laura Duran Castillo ",6,60,1,"Media Buyer",200,200
+"31","4858805","Lunave","Diana Laura Duran Castillo ",8,210,3.5,"Media Buyer",200,700
+"32","4858805","Singer","Diana Laura Duran Castillo ",8,45,0.75,"Media Buyer",200,150
+"33","4858805","Toyota","Diana Laura Duran Castillo ",8,75,1.25,"Media Buyer",200,250
+"34","4858805","Singer","Diana Laura Duran Castillo ",6,660,11,"Media Buyer",200,2200
+"35","4858805","Toyota","Diana Laura Duran Castillo ",6,3105,51.75,"Media Buyer",200,10350
+"36","4858805","Toyota","Diana Laura Duran Castillo ",7,2115,35.25,"Media Buyer",200,7050
+"37","4858805","Richs","Diana Laura Duran Castillo ",6,1695,28.25,"Media Buyer",200,5650
+"38","69709","Toyota","Claudia V. ",6,435,7.25,"Dir BI",200,1450
+"39","69709","Walmart","Claudia V. ",6,555,9.25,"Dir BI",200,1850
+"40","69709","MSD","Claudia V. ",7,225,3.75,"Dir BI",200,750
+"41","69709","Apple","Claudia V. ",7,60,1,"Dir BI",200,200
+"42","69709","INVEX","Claudia V. ",7,630,10.5,"Dir BI",200,2100
+"43","69709","Lunave","Claudia V. ",7,7260,121,"Dir BI",200,24200
+"44","69709","Apple","Claudia V. ",6,45,0.75,"Dir BI",200,150
+"45","69709","Lunave","Claudia V. ",6,4680,78,"Dir BI",200,15600
+"46","69709","Pitch Superama","Claudia V. ",6,195,3.25,"Dir BI",200,650
+"47","69709","Lunave","Claudia V. ",8,585,9.75,"Dir BI",200,1950
+"48","69709","MSD","Claudia V. ",8,15,0.25,"Dir BI",200,50
+"49","69709","Toyota","Claudia V. ",8,30,0.5,"Dir BI",200,100
+"50","69709","Walmart","Claudia V. ",8,15,0.25,"Dir BI",200,50
+"51","69709","Walmart","Claudia V. ",7,885,14.75,"Dir BI",200,2950
+"52","69709","Toyota","Claudia V. ",7,825,13.75,"Dir BI",200,2750
+"53","69727","INVEX","JuanPa Plata ",6,60,1,"Research Manager",200,200
+"54","69727","Lunave","JuanPa Plata ",6,1800,30,"Research Manager",200,6000
+"55","69727","Generación de leads Toyota Saltillo","JuanPa Plata ",6,630,10.5,"Research Manager",200,2100
+"56","69727","Pitch Walmart Ecommerce","JuanPa Plata ",6,240,4,"Research Manager",200,800
+"57","69727","Richs","JuanPa Plata ",6,30,0.5,"Research Manager",200,100
+"58","69727","Singer","JuanPa Plata ",6,60,1,"Research Manager",200,200
+"59","69727","Toyota","JuanPa Plata ",6,2190,36.5,"Research Manager",200,7300
+"60","69727","Walmart","JuanPa Plata ",6,420,7,"Research Manager",200,1400
+"61","69727","Zuma","JuanPa Plata ",6,60,1,"Research Manager",200,200
+"62","69727","ACH Foods","JuanPa Plata ",6,60,1,"Research Manager",200,200
+"63","69727","Blason","JuanPa Plata ",6,90,1.5,"Research Manager",200,300
+"64","69727","Singer","JuanPa Plata ",7,60,1,"Research Manager",200,200
+"65","69727","Toyota","JuanPa Plata ",7,1320,22,"Research Manager",200,4400
+"66","69727","Walmart","JuanPa Plata ",7,1530,25.5,"Research Manager",200,5100
+"67","69727","MSD","JuanPa Plata ",6,570,9.5,"Research Manager",200,1900
+"68","69727","Pitch Superama","JuanPa Plata ",6,300,5,"Research Manager",200,1000
+"69","69727","Blason","JuanPa Plata ",7,540,9,"Research Manager",200,1800
+"70","69727","Generación de leads Toyota Saltillo","JuanPa Plata ",7,450,7.5,"Research Manager",200,1500
+"71","69727","Herdez","JuanPa Plata ",7,240,4,"Research Manager",200,800
+"72","69727","INVEX","JuanPa Plata ",7,120,2,"Research Manager",200,400
+"73","69727","Lunave","JuanPa Plata ",7,660,11,"Research Manager",200,2200
+"74","69727","MSD","JuanPa Plata ",7,810,13.5,"Research Manager",200,2700
+"75","69727","PITCH GREAT VALUE","JuanPa Plata ",7,210,3.5,"Research Manager",200,700
+"76","69727","Richs","JuanPa Plata ",7,300,5,"Research Manager",200,1000
+"77","69727","Blason","JuanPa Plata ",8,60,1,"Research Manager",200,200
+"78","69727","Herdez","JuanPa Plata ",8,90,1.5,"Research Manager",200,300
+"79","69727","MSD","JuanPa Plata ",8,60,1,"Research Manager",200,200

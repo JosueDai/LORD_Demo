@@ -1,0 +1,25 @@
+"","Mes","Puesto","tipo","Horas","Ratecard"
+"1",6,"Analytics Jr","ASIGNADA",70,124
+"2",7,"Analytics Jr","ASIGNADA",117.25,124
+"3",6,"Analytics Sr","ASIGNADA",67,68
+"4",7,"Analytics Sr","ASIGNADA",96.5,68
+"5",6,"Dir BI","ASIGNADA",16.5,30
+"6",7,"Dir BI","ASIGNADA",28.5,30
+"7",6,"Media Buyer","ASIGNADA",80,70
+"8",7,"Media Buyer","ASIGNADA",53.25,70
+"9",6,"Research Manager","ASIGNADA",46.5,65
+"10",7,"Research Manager","ASIGNADA",62.5,65
+"11",6,"Analytics Jr","NO ASIGNADA",43.75,0
+"12",7,"Analytics Jr","NO ASIGNADA",42.5,0
+"13",6,"Analytics Sr","NO ASIGNADA",32.5,0
+"14",7,"Analytics Sr","NO ASIGNADA",40.5,0
+"15",8,"Analytics Sr","NO ASIGNADA",7,0
+"16",6,"Dir BI","NO ASIGNADA",82,0
+"17",7,"Dir BI","NO ASIGNADA",136.25,0
+"18",8,"Dir BI","NO ASIGNADA",10.75,0
+"19",6,"Media Buyer","NO ASIGNADA",33.5,0
+"20",7,"Media Buyer","NO ASIGNADA",30.25,0
+"21",8,"Media Buyer","NO ASIGNADA",5.5,0
+"22",6,"Research Manager","NO ASIGNADA",62,0
+"23",7,"Research Manager","NO ASIGNADA",41.5,0
+"24",8,"Research Manager","NO ASIGNADA",3.5,0
