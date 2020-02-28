@@ -139,12 +139,12 @@ PM_rate<-cleanRate(PM_rate)
 
 #Total de horas por persona--------------- 
 TotalporODT <- function (data){
-  TotalporODT <-aggregate( Tiempo ~  ODT + Nombre, FUN=sum, data=data)
+  TotalporODT <-aggregate( Tiempo ~  ODT + Nombre, FUN=sum, data=data)  ##Funcion calcular las horas por personas
   return (TotalporODT)
 }
 
 
-BI_TotalporODT<-TotalporODT(BI_ts)
+BI_TotalporODT<-TotalporODT(BI_ts)        #Funcion aplicada a dataframe
 Creativo_TotalporODT<- TotalporODT(Creativo_ts)
 Cuentas_TotalporODT<-TotalporODT(Cuentas_ts)
 UX_TotalporODT<-TotalporODT(UX_ts)
@@ -152,7 +152,7 @@ PM_TotalporODT<-TotalporODT(PM_ts)
 Desarrollo_TotalporODT<-TotalporODT(Desarrollo_ts)
 SocialCnt_TotalporODT<-TotalporODT(SocialCnt_ts)
 
-write.csv(BI_TotalporODT, "BI/LORD/BI_TotalporODT.csv", na="")   #Exportar datos 
+write.csv(BI_TotalporODT, "BI/LORD/BI_TotalporODT.csv", na="")   #Exportar datos a carpetas 
 write.csv(Creativo_TotalporODT, "Creativo/LORD/Creativo_TotalporODT.csv", na="")
 write.csv(Cuentas_TotalporODT, "Cuentas/LORD/Cuentas_TotalporODT.csv", na="")   
 write.csv(SocialCnt_TotalporODT, "SocialCnt/LORD/SocialCnt_TotalporODT.csv", na="")
@@ -163,12 +163,12 @@ write.csv(PM_TotalporODT, "PM/LORD/PM_TotalporODT.csv", na="")
 
 #Total de horas por marca----
 TotalporMarca <- function (data){
-  TotalporMarca<-aggregate( Tiempo ~  Marca + Nombre, FUN=sum, data=data)
+  TotalporMarca<-aggregate( Tiempo ~  Marca + Nombre, FUN=sum, data=data) ##Funcion calcular horas por marca
   return (TotalporMarca)
 }
 
 
-BI_TotalporMarca<-TotalporMarca(BI_ts)
+BI_TotalporMarca<-TotalporMarca(BI_ts) #Funcion aplicada a dataframe 
 Creativo_TotalporMarca<-TotalporMarca(Creativo_ts)
 Cuentas_TotalporMarca<-TotalporMarca(Cuentas_ts)
 UX_TotalporMarca<-TotalporMarca(UX_ts)
@@ -246,7 +246,7 @@ write.csv(SocialCnt_ArealporMarca, "SocialCnt/LORD/SocialCnt_ArealporMarca.csv",
 
 
 
-BI_TotalporODTmes<-TotalporODTmes(BI_ts)
+BI_TotalporODTmes<-TotalporODTmes(BI_ts) #Funcion aplicada a dataframe de areas
 Creativo_TotalporODTmes<-TotalporODTmes(Creativo_ts)
 Cuentas_TotalporODTmes<-TotalporODTmes(Cuentas_ts)
 UX_TotalporODTmes<-TotalporODTmes(UX_ts)
@@ -254,7 +254,7 @@ PM_TotalporODTmes<-TotalporODTmes(PM_ts)
 Desarrollo_TotalporODTmes<-TotalporODTmes(Desarrollo_ts)
 SocialCnt_TotalporODTmes<-TotalporODTmes(SocialCnt_ts)
 
-write.csv(BI_TotalporODTmes, "BI/LORD/BI_TotalporODTmes.csv", na="")   
+write.csv(BI_TotalporODTmes, "BI/LORD/BI_TotalporODTmes.csv", na="")    ##Exportacion de datos
 write.csv(PM_TotalporODTmes, "PM/LORD/PM_TotalporODTmes.csv", na="")   
 write.csv(Creativo_TotalporODTmes, "Creativo/LORD/Creativo_TotalporODTmes.csv", na="")   
 write.csv(Cuentas_TotalporODTmes, "Cuentas/LORD/Cuentas_TotalporODTmes.csv", na="")   
@@ -264,7 +264,7 @@ write.csv(SocialCnt_TotalporODTmes, "SocialCnt/LORD/SocialCnt_TotalporODTmes.csv
 
 
 TotalporMarcaMes <- function (data){
-  TotalporMarcaMes<-aggregate( Tiempo ~  Marca + Nombre+ ID + Mes, FUN=sum, data=data)
+  TotalporMarcaMes<-aggregate( Tiempo ~  Marca + Nombre+ ID + Mes, FUN=sum, data=data)   #
   TotalporMarcaMes$Horas<-TotalporMarcaMes$Tiempo/60
   return (TotalporMarcaMes)
 }
@@ -278,7 +278,7 @@ PM_TotalporMarcaMes<-TotalporMarcaMes(PM_ts)
 Desarrollo_TotalporMarcaMes<-TotalporMarcaMes(Desarrollo_ts)
 SocialCnt_TotalporMarcaMes<-TotalporMarcaMes(SocialCnt_ts)
 
-write.csv(BI_TotalporMarcaMes, "BI/LORD/BI_TotalporMarcaMes.csv", na="")   
+write.csv(BI_TotalporMarcaMes, "BI/LORD/BI_TotalporMarcaMes.csv", na="")   ##Exportacion de datos.
 write.csv(PM_TotalporMarcaMes, "PM/LORD/PM_TotalporMarcaMes.csv", na="")   
 write.csv(Creativo_TotalporMarcaMes, "Creativo/LORD/Creativo_TotalporMarcaMes.csv", na="")   
 write.csv(Cuentas_TotalporMarcaMes, "Cuentas/LORD/Cuentas_TotalporMarcaMes.csv", na="")   
@@ -287,11 +287,11 @@ write.csv(UX_TotalporMarcaMes, "UX/LORD/UX_TotalporMarcaMes.csv", na="")
 write.csv(SocialCnt_TotalporMarcaMes, "SocialCnt/LORD/SocialCnt_TotalporMarcaMes.csv", na="")   
 
 AreaporODTmes <- function (data){
-  AreaporODTmes <-aggregate( Tiempo ~  ODT + Mes, FUN=sum, data=data)
+  AreaporODTmes <-aggregate( Tiempo ~  ODT + Mes, FUN=sum, data=data)       #Agrega variables a dataframe
   return (AreaporODTmes)
 }
 
-
+##Funcion aplicada a dataframe
 
 BI_AreaporODTmes<-AreaporODTmes(BI_ts)
 Creativo_AreaporODTmes<-AreaporODTmes(Creativo_ts)
@@ -301,7 +301,7 @@ PM_AreaporODTmes<-AreaporODTmes(PM_ts)
 Desarrollo_AreaporODTmes<-AreaporODTmes(Desarrollo_ts)
 SocialCnt_AreaporODTmes<-AreaporODTmes(SocialCnt_ts)
 
-write.csv(BI_AreaporODTmes, "BI/LORD/BI_AreaporODTmes.csv", na="")   
+write.csv(BI_AreaporODTmes, "BI/LORD/BI_AreaporODTmes.csv", na="")   #Exportacion de datos a carpetas
 write.csv(PM_AreaporODTmes, "PM/LORD/PM_AreaporODTmes.csv", na="")   
 write.csv(Creativo_AreaporODTmes, "Creativo/LORD/Creativo_AreaporODTmes.csv", na="")   
 write.csv(Cuentas_AreaporODTmes, "Cuentas/LORD/Cuentas_AreaporODTmes.csv", na="")   
@@ -312,12 +312,12 @@ write.csv(SocialCnt_AreaporODTmes, "SocialCnt/LORD/SocialCnt_AreaporODTmes.csv",
 
 
 ArealporMarcaMes <- function (data){
-  ArealporMarcaMes<-aggregate( Tiempo ~  Marca + Mes, FUN=sum, data=data)
+  ArealporMarcaMes<-aggregate( Tiempo ~  Marca + Mes, FUN=sum, data=data)   ##Funcion detalles de marca por mes
   return (ArealporMarcaMes)
 }
 
-
-BI_ArealporMarcaMes<-ArealporMarcaMes(BI_ts)
+##Funcion aplicada a dataframe
+BI_ArealporMarcaMes<-ArealporMarcaMes(BI_ts)     
 Creativo_ArealporMarcaMes<-ArealporMarcaMes(Creativo_ts)
 Cuentas_ArealporMarcaMes<-ArealporMarcaMes(Cuentas_ts)
 UX_ArealporMarcaMes<-ArealporMarcaMes(UX_ts)
@@ -325,7 +325,7 @@ PM_ArealporMarcaMes<-ArealporMarcaMes(PM_ts)
 Desarrollo_ArealporMarcaMes<-ArealporMarcaMes(Desarrollo_ts)
 SocialCnt_ArealporMarcaMes<-ArealporMarcaMes(SocialCnt_ts)
 
-write.csv(BI_ArealporMarcaMes, "BI/LORD/BI_ArealporMarcaMes.csv", na="")   
+write.csv(BI_ArealporMarcaMes, "BI/LORD/BI_ArealporMarcaMes.csv", na="")  ##Exportacion de datos a carpeta seleccionada 
 write.csv(PM_ArealporMarcaMes, "PM/LORD/PM_ArealporMarcaMes.csv", na="")   
 write.csv(Creativo_ArealporMarcaMes, "Creativo/LORD/Creativo_ArealporMarcaMes.csv", na="")   
 write.csv(Cuentas_ArealporMarcaMes, "Cuentas/LORD/Cuentas_ArealporMarcaMes.csv", na="")   
@@ -338,11 +338,11 @@ write.csv(SocialCnt_ArealporMarcaMes, "SocialCnt/LORD/SocialCnt_ArealporMarcaMes
 
 
 TotalporODTS <- function (data){
-  TotalporODTS <-aggregate( Tiempo ~  ODT + Nombre + Semana, FUN=sum, data=data)
+  TotalporODTS <-aggregate( Tiempo ~  ODT + Nombre + Semana, FUN=sum, data=data)  #Funcion agrega datos de horas por semana y hora
   return (TotalporODTS)
 }
 
-BI_TotalporODTS<-TotalporODTS(BI_ts)
+BI_TotalporODTS<-TotalporODTS(BI_ts) #funcion aplicada dataframe
 Creativo_TotalporODTS<-TotalporODTS(Creativo_ts)
 Cuentas_TotalporODTS<-TotalporODTS(Cuentas_ts)
 UX_TotalporODTS<-TotalporODTS(UX_ts)
@@ -350,7 +350,7 @@ PM_TotalporODTS<-TotalporODTS(PM_ts)
 Desarrollo_TotalporODTS<-TotalporODTS(Desarrollo_ts)
 SocialCnt_TotalporODTS<-TotalporODTS(SocialCnt_ts)
 
-write.csv(BI_TotalporODTS, "BI/LORD/BI_TotalporODTS.csv", na="")   
+write.csv(BI_TotalporODTS, "BI/LORD/BI_TotalporODTS.csv", na="")  ##Exportacion de dataframe a carpetas   
 write.csv(PM_TotalporODTS, "PM/LORD/PM_TotalporODTS.csv", na="")   
 write.csv(Creativo_TotalporODTS, "Creativo/LORD/Creativo_TotalporODTS.csv", na="")   
 write.csv(Cuentas_TotalporODTS, "Cuentas/LORD/Cuentas_TotalporODTS.csv", na="")   
@@ -360,7 +360,7 @@ write.csv(SocialCnt_TotalporODTS, "SocialCnt/LORD/SocialCnt_TotalporODTS.csv", n
 
 
 TotalporMarcaS <- function (data){
-  TotalporMarcaS<-aggregate( Tiempo ~  Marca + Nombre + Semana, FUN=sum, data=data)
+  TotalporMarcaS<-aggregate( Tiempo ~  Marca + Nombre + Semana, FUN=sum, data=data)  
   return (TotalporMarcaS)
 }
 
@@ -383,7 +383,7 @@ write.csv(SocialCnt_TotalporMarcaS, "SocialCnt/LORD/SocialCnt_TotalporMarcaS.csv
 
 
 TotalporMarcaSYM <- function (data){
-  TotalporMarcaSYM<-aggregate( Tiempo ~  Marca + Nombre + Semana + Mes, FUN=sum, data=data)
+  TotalporMarcaSYM<-aggregate( Tiempo ~  Marca + Nombre + Semana + Mes, FUN=sum, data=data)  ##Funcion agrega marca, nombre, semana por semana y mes 
   return (TotalporMarcaSYM)
 }
 
@@ -395,7 +395,7 @@ PM_TotalporMarcaSYM<-TotalporMarcaSYM(PM_ts)
 Desarrollo_TotalporMarcaSYM<-TotalporMarcaSYM(Desarrollo_ts)
 SocialCnt_TotalporMarcaSYM<-TotalporMarcaSYM(SocialCnt_ts)
 
-write.csv(BI_TotalporMarcaSYM, "BI/LORD/BI_TotalporMarcaSYM.csv", na="")   
+write.csv(BI_TotalporMarcaSYM, "BI/LORD/BI_TotalporMarcaSYM.csv", na="")   #Exporatacion de datos
 write.csv(PM_TotalporMarcaSYM, "PM/LORD/PM_TotalporMarcaSYM.csv", na="")   
 write.csv(Creativo_TotalporMarcaSYM, "Creativo/LORD/Creativo_TotalporMarcaSYM.csv", na="")   
 write.csv(Cuentas_TotalporMarcaSYM, "Cuentas/LORD/Cuentas_TotalporMarcaSYM.csv", na="")   
@@ -405,7 +405,7 @@ write.csv(SocialCnt_TotalporMarcaSYM, "SocialCnt/LORD/SocialCnt_TotalporMarcaSYM
 
 
 AreaporODTS <- function (data){
-  AreaporODTS <-aggregate( Tiempo ~  ODT + Semana, FUN=sum, data=data)
+  AreaporODTS <-aggregate( Tiempo ~  ODT + Semana, FUN=sum, data=data)  #Funcion de tiempo por ODT 
   return (AreaporODTS)
 }
 
@@ -430,7 +430,7 @@ AreaporMarcaS <- function (data){
   return (AreaporMarcaS)
 }
 
-BI_AreaporMarcaS<-AreaporMarcaS(BI_ts)
+BI_AreaporMarcaS<-AreaporMarcaS(BI_ts)   #Funcion AreapoMarca aplicando a dataframe 
 Creativo_AreaporMarcaS<-AreaporMarcaS(Creativo_ts)
 Cuentas_AreaporMarcaS<-AreaporMarcaS(Cuentas_ts)
 UX_AreaporMarcaS<-AreaporMarcaS(UX_ts)
@@ -438,7 +438,7 @@ PM_AreaporMarcaS<-AreaporMarcaS(PM_ts)
 Desarrollo_AreaporMarcaS<-AreaporMarcaS(Desarrollo_ts)
 SocialCnt_AreaporMarcaS<-AreaporMarcaS(SocialCnt_ts)
 
-write.csv(BI_AreaporMarcaS, "BI/LORD/BI_AreaporMarcaS.csv", na="")   
+write.csv(BI_AreaporMarcaS, "BI/LORD/BI_AreaporMarcaS.csv", na="")   ##Exportacion de datos
 write.csv(PM_AreaporMarcaS, "PM/LORD/PM_AreaporMarcaS.csv", na="")   
 write.csv(Creativo_AreaporMarcaS, "Creativo/LORD/Creativo_AreaporMarcaS.csv", na="")   
 write.csv(Cuentas_AreaporMarcaS, "Cuentas/LORD/Cuentas_AreaporMarcaS.csv", na="")   
@@ -451,18 +451,18 @@ write.csv(SocialCnt_AreaporMarcaS, "SocialCnt/LORD/SocialCnt_AreaporMarcaS.csv",
 
 
 TotalTiempoPersonaS <- function (data){
-  TotalTiempoPersonaS <-aggregate( Tiempo ~  Nombre + Semana, FUN=sum, data=data)
+  TotalTiempoPersonaS <-aggregate( Tiempo ~  Nombre + Semana, FUN=sum, data=data)  ##Funcion que calcula el tiempo por persona en semana
   TotalTiempoPersonaS$Tiempo <-TotalTiempoPersonaS$Tiempo/60
   return (TotalTiempoPersonaS)
 }
 
 TotalTiempoPersonaM <- function (data){
-  TotalTiempoPersonaM <-aggregate( Tiempo ~  Nombre + Mes, FUN=sum, data=data)
+  TotalTiempoPersonaM <-aggregate( Tiempo ~  Nombre + Mes, FUN=sum, data=data)   ##Funcion que calcula el tiempo de personas por mes
   TotalTiempoPersonaM$Horas<-TotalTiempoPersonaM$Tiempo/60
   
   return (TotalTiempoPersonaM)
 }
-
+ ##Funcion aplicada en cada dataframe y exportacion de datos
 
 BI_TotalTiempoPersonaS<-TotalTiempoPersonaS(BI_ts)
 Creativo_TotalTiempoPersonaS<-TotalTiempoPersonaS(Creativo_ts)
@@ -501,7 +501,7 @@ write.csv(SocialCnt_TotalTiempoPersonaM, "SocialCnt/LORD/SocialCnt_TotalTiempoPe
 
 #TOTAL $ BI --------------- 
 TotalporMarcaMesYSEM <- function (data){
-  TotalporMarcaMesYSEM<-aggregate( Tiempo ~  Marca + Nombre+ ID + Mes + Semana, FUN=sum, data=data)
+  TotalporMarcaMesYSEM<-aggregate( Tiempo ~  Marca + Nombre+ ID + Mes + Semana, FUN=sum, data=data)  ##Funcion que muestra datos de marca por semana
   return (TotalporMarcaMesYSEM)
 }
 
@@ -522,9 +522,9 @@ PM_TotalporMarcaMesYSEM<-TotalporMarcaMesYSEM(PM_ts)
 Desarrollo_TotalporMarcaMesYSEM<-TotalporMarcaMesYSEM(Desarrollo_ts)
 SocialCnt_TotalporMarcaMesYSEM<-TotalporMarcaMesYSEM(SocialCnt_ts)
 
+#Creacion de nuevas tablas utilizando la funcion merge para unir datos de dataframe 
 
-
-BI_totalPNL<-merge(BI_TotalporMarcaMesYSEM, subset(BI_rate, select = -Nombre), by=c("ID"))
+BI_totalPNL<-merge(BI_TotalporMarcaMesYSEM, subset(BI_rate, select = -Nombre), by=c("ID"))   
 BI_totalPNL<- merge(BI_TotalporMarcaMes, subset(BI_rate, select = -Nombre), by=c("ID")) #merge
 BI_totalPNL$Money<-BI_totalPNL$Rate*BI_totalPNL$Horas
 
@@ -568,7 +568,7 @@ Creativo_Money<-Money(Creativo_totalPNL)
 
 
 
-write.csv(BI_TotalporMarcaMesYSEM, "BI/LORD/BI_TotalporMarcaMesYSEM.csv", na="")   
+write.csv(BI_TotalporMarcaMesYSEM, "BI/LORD/BI_TotalporMarcaMesYSEM.csv", na="")   ##Exportacion de datos
 write.csv(PM_TotalporMarcaMesYSEM, "PM/LORD/PM_TotalporMarcaMesYSEM.csv", na="")   
 write.csv(Creativo_TotalporMarcaMesYSEM, "Creativo/LORD/Creativo_TotalporMarcaMesYSEM.csv", na="")   
 write.csv(Cuentas_TotalporMarcaMesYSEM, "Cuentas/LORD/Cuentas_TotalporMarcaMesYSEM.csv", na="")   
@@ -599,8 +599,8 @@ MoneyRC<- function(totalRCMoney){
 }
 
 Utilidad<- function(Money, MoneyRC){
-  MoneyBI<-sum(MoneyRC$Money)-sum(Money$Money)
-  return (MoneyBI)
+  Utilidad<-sum(MoneyRC$Money) - sum(Money$Money)
+  return (Utilidad)
 }
 
 
@@ -621,13 +621,13 @@ Desarrollo_MoneyRC<-MoneyRC(Desarrollo_totalRCMoney)
 SocialCnt_MoneyRC<-MoneyRC(SocialCnt_totalRCMoney)
 
 
-BI_Utilidad<-Utilidad(BI_Money, BI_MoneyRC)
-Creativo_Utilidad<-Utilidad(Creativo_Money, Creativo_MoneyRC)
-Cuentas_Utilidad<-Utilidad(Cuentas_Money, Cuentas_MoneyRC)
-UX_Utilidad<-Utilidad(UX_Money, UX_MoneyRC)
-PM_Utilidad<-Utilidad(PM_Money, PM_MoneyRC)
-Desarrollo_Utilidad<-Utilidad(Desarrollo_Money, Desarrollo_MoneyRC)
-SocialCnt_Utilidad<-Utilidad(SocialCnt_Money, SocialCnt_MoneyRC)
+BI_Utilidad<-Utilidad(BI_totalRCMoney, BI_MoneyRC)
+Creativo_Utilidad<-Utilidad(Creativo_totalRCMoney, Creativo_MoneyRC)
+Cuentas_Utilidad<-Utilidad(Cuentas_totalRCMoney, Cuentas_MoneyRC)
+UX_Utilidad<-Utilidad(UX_totalRCMoney, UX_MoneyRC)
+PM_Utilidad<-Utilidad(PM_totalRCMoney, PM_MoneyRC)
+Desarrollo_Utilidad<-Utilidad(Desarrollo_totalRCMoney, Desarrollo_MoneyRC)
+SocialCnt_Utilidad<-Utilidad(SocialCnt_totalRCMoney, SocialCnt_MoneyRC)
 
 
 
@@ -652,7 +652,7 @@ write.csv(SocialCnt_Utilidad, "SocialCnt/LORD/SocialCnt_Utilidad.csv", na="")
 #### Cuáles ODT son las que ocupan mas tiempo por persona--------------- 
 
 top3ODT<- function(TotalporODT){
-  top3ODT<-ddply(TotalporODT,'Nombre',function(TotalporODT)TotalporODT[order(TotalporODT$Tiempo,decreasing=TRUE)[1:3],])
+  top3ODT<-ddply(TotalporODT,'Nombre',function(TotalporODT)TotalporODT[order(TotalporODT$Tiempo,decreasing=TRUE)[1:3],]) #Funcion que calcula los tiempos por personas
   top3ODT <- na.omit(top3ODT)
   return (top3ODT)
 }
